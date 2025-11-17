@@ -18,7 +18,7 @@
     body{margin:0;background:var(--bg);color:#111;line-height:1.45}
     .container{max-width:var(--max-width);margin:28px auto;padding:20px}
     
-    /* === NEW: TOP HORIZONTAL SCREENSHOT ROW === */
+    /* === NEW: TOP HORIZONTAL SCREENSHOT ROW (SCROLLABLE) === */
     .top-screenshot-section {
       background: #fff;
       padding: 20px 0;
@@ -66,7 +66,7 @@
       }
     }
 
-    /* === ORIGINAL STYLES (unchanged below) === */
+    /* === ORIGINAL STYLES (unchanged) === */
     .hero{display:flex;gap:20px;align-items:center;background:linear-gradient(180deg,#fff,#f6fbff);padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(12,35,66,0.06)}
     .app-media{display:flex;flex-direction:column;align-items:center;gap:14px}
     .app-icon{width:96px;height:96px;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(11,132,255,0.12)}
@@ -102,27 +102,189 @@
   <!-- === NEW: TOP HORIZONTAL SCREENSHOTS (SCROLLABLE) === -->
   <div class="top-screenshot-section">
     <div class="top-screenshot-row" id="topScreenshotRow">
-      <!-- ADD MORE IMAGES HERE -->
-      <img src="https://play-lh.googleusercontent.com/tUk4py5qS-PShRrjsSuqXXg_C_QI47AD5ARm3H5SqzAahP57OtZFxiom9S8X78RI-dQ9f-7DJ8qLmVlbHz3d6A=w1052-h592-rw" alt="Screenshot 1" onclick="openLightbox(this.src)">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTHLESSF1KcAfj_d2BRzV-QbmmGVz0BeBu4fGDUbKnm8LXqm42KGq4OyLSZ4LaI8JDSud5fJGV8MAXdxuAwcgbMI5YPpKc5ijZASsYAwpFDpMmE8tPbWjyTdzqz45K_KIeABKadhGJrnCSBdG22Bsy1iaHpJVgdQcCbjzb2T0zDnkNiKVCayO8L5SDwEc/s400/1000050272.jpg" alt="Screenshot 2" onclick="openLightbox(this.src)">
-      <img src="https://play-lh.googleusercontent.com/nxqofTZQXT4cr3U0pPzbe5jAssLhqZJPJ_qjO75YvwXMQjyVnb2y8xgLaBw_Pn9B8KBtlTB7jJX-NU6N21pJrg=w1052-h592-rw" alt="Screenshot 3" onclick="openLightbox(this.src)">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiedyybl3kAUpVfD9mqwnzD8FyQzegWrl3neq1DKWMkS7DdiD6ZBkQY-CeTjTkbsdIZ3xB3-2XEqMjRZy4Xx3FHGqhssVaEOhqO4R1wlRMQQ2vSIPcjs4I9xGGlC52K6Mzc0WA4_KFz3B_vy43fqebLgAtkNABl322zhE7F5wWex_eBFgPHXhoiks_vfbo/s400/1000050274.jpg" alt="Screenshot 4" onclick="openLightbox(this.src)">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8inmJ_9xXt8kNhkvfWAX9HDgBUFWZCkRRh1gvmHNe_RLv7uYZU0r3JUiZxgz0u2Mx4s46Gi7evEVtqUXxFgaBuyoz7k6wYK06q9TNJsm_rWXhCP0PdwgGflaA7TFpp57ftizjz7jhYoySOnz7ZDAV_0JV9sjpLk8De-A49Ksh7RfyKSvWOW1lMakbXCc/s400/1000050275.jpg" alt="Screenshot 5" onclick="openLightbox(this.src)">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvNqkGjhi5uLqD2v10ffPitJV3ki5jENB5FDowTTVTJH03WaVe5mrvFYznzvZdoIXNQyqjvtGc_d5Hg_EbkJrUl1mk2qEVcD2s0fSb9KM7_5pfCPPYeiR6ykwCgCW_4mh7GlRi0cwBedQh0GhhbXWU0Uguq3MwMr3ZTjyaYJ2RSQ5poJRX5MiTihyctRo/s400/1000050277.jpg" alt="Screenshot 6" onclick="openLightbox(this.src)">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKzMi8ShTHVYUyNbemGiWHzrEgNwagNMtjccrunStT_DhFyuBz1XVXbY8N-t4rwu2RgbDI3uLkPOSL7LxTVl4R70Pdjkypuz0adYBJgrMb7Ci2WjJNGS4OUNJ_RMVWG_iPaAoqHGPb-snO-sLaaHY_f1n4MK5jIza6eoF-lcakF5euWgUMwFtMnj1aj0o/s400/1000050278.jpg" alt="Screenshot 7" onclick="openLightbox(this.src)">
-      <!-- ADD MORE LIKE THIS -->
+      <!-- ALL ORIGINAL SCREENSHOTS MOVED HERE (including the two from hero) -->
+      <img src="https://play-lh.googleusercontent.com/tUk4py5qS-PShRrjsSuqXXg_C_QI47AD5ARm3H5SqzAahP57OtZFxiom9S8X78RI-dQ9f-7DJ8qLmVlbHz3d6A=w1052-h592-rw" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTHLESSF1KcAfj_d2BRzV-QbmmGVz0BeBu4fGDUbKnm8LXqm42KGq4OyLSZ4LaI8JDSud5fJGV8MAXdxuAwcgbMI5YPpKc5ijZASsYAwpFDpMmE8tPbWjyTdzqz45K_KIeABKadhGJrnCSBdG22Bsy1iaHpJVgdQcCbjzb2T0zDnkNiKVCayO8L5SDwEc/s400/1000050272.jpg" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <img src="https://play-lh.googleusercontent.com/nxqofTZQXT4cr3U0pPzbe5jAssLhqZJPJ_qjO75YvwXMQjyVnb2y8xgLaBw_Pn9B8KBtlTB7jJX-NU6N21pJrg=w1052-h592-rw" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiedyybl3kAUpVfD9mqwnzD8FyQzegWrl3neq1DKWMkS7DdiD6ZBkQY-CeTjTkbsdIZ3xB3-2XEqMjRZy4Xx3FHGqhssVaEOhqO4R1wlRMQQ2vSIPcjs4I9xGGlC52K6Mzc0WA4_KFz3B_vy43fqebLgAtkNABl322zhE7F5wWex_eBFgPHXhoiks_vfbo/s400/1000050274.jpg" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8inmJ_9xXt8kNhkvfWAX9HDgBUFWZCkRRh1gvmHNe_RLv7uYZU0r3JUiZxgz0u2Mx4s46Gi7evEVtqUXxFgaBuyoz7k6wYK06q9TNJsm_rWXhCP0PdwgGflaA7TFpp57ftizjz7jhYoySOnz7ZDAV_0JV9sjpLk8De-A49Ksh7RfyKSvWOW1lMakbXCc/s400/1000050275.jpg" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvNqkGjhi5uLqD2v10ffPitJV3ki5jENB5FDowTTVTJH03WaVe5mrvFYznzvZdoIXNQyqjvtGc_d5Hg_EbkJrUl1mk2qEVcD2s0fSb9KM7_5pfCPPYeiR6ykwCgCW_4mh7GlRi0cwBedQh0GhhbXWU0Uguq3MwMr3ZTjyaYJ2RSQ5poJRX5MiTihyctRo/s400/1000050277.jpg" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKzMi8ShTHVYUyNbemGiWHzrEgNwagNMtjccrunStT_DhFyuBz1XVXbY8N-t4rwu2RgbDI3uLkPOSL7LxTVl4R70Pdjkypuz0adYBJgrMb7Ci2WjJNGS4OUNJ_RMVWG_iPaAoqHGPb-snO-sLaaHY_f1n4MK5jIza6eoF-lcakF5euWgUMwFtMnj1aj0o/s400/1000050278.jpg" alt="BattleArena App Screenshot" onclick="openLightbox(this.src)">
+      <!-- ADD MORE HERE: <img src="YOUR_URL" alt="..." onclick="openLightbox(this.src)"> -->
     </div>
   </div>
 
   <div class="container">
-    <!-- HERO -->
+    <!-- HERO (original preview screenshots REMOVED - now in top row) -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="app-media" aria-hidden="true">
-        <!-- App Icon -->
+        <!-- Replace src values with your real images -->
         <div class="app-icon">
-          <img src="https://play-lh.googleusercontent.com/SYub5RrlwL1hFMJ3nHbIG2BiN-fd-ECuVgo9bP1NVuTgXveroIwZ1u8sMujYAxNV7b4YEz3mnN8vWTx4FunT=w480-h960-rw" alt="BattleArena Icon">
+          <img src="https://play-lh.googleusercontent.com/SYub5RrlwL1hFMJ3nHbIG2BiN-fd-ECuVgo9bP1NVuTgXveroIwZ1u8sMujYAxNV7b4YEz3mnN8vWTx4FunT=w480-h960-rw">
         </div>
       </div>
       <div class="hero-text">
         <h1 id="hero-title">BattleArena — Watch videos and earn reward also Grow your YouTube & Earn while you promote, Invite as many Friends as you can and earn 5% of Points lifetime earning of what your friends earn on watch videos</h1>
-        <p class="lead">Upload your video, complete simple daily tasks (watch, spin, daily login) and get your video active — everyone earns: viewers gain points, uploaders gain points. Invite as many friends you can and earn points instantly ,also earn 5% lifetime earning if
+        <p class="lead">Upload your video, complete simple daily tasks (watch, spin, daily login) and get your video active — everyone earns: viewers gain points, uploaders gain points. Invite as many friends you can and earn points instantly ,also earn 5% lifetime earning if your friends watch as many videos , Redeem and withdraw to UPI, bank, Google Play gift cards,payeer,speedwallet for btc Satoshi global wallets, more paymnet method will be add later.</p>
+        <div class="badges">
+          <!-- Google Play badge -->
+          <a href="https://play.google.com/store/apps/details?id=com.battle.BattleArena" target="_blank" rel="noopener noreferrer" aria-label="Get BattleArena on Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height:48px">
+          </a>
+          <!-- Secondary CTA -->
+          <a class="btn secondary" href="#how-it-works">How it works</a>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://play.google.com/store/apps/details?id=com.battle.BattleArena" target="_blank" rel="noopener noreferrer">Download & Start Earning</a>
+          <span class="muted">• Available on Android</span>
+        </div>
+      </div>
+    </section>
+    <!-- MAIN GRID -->
+    <div class="grid" role="main">
+      <div class="card">
+        <h3>What makes BattleArena different?</h3>
+        <ul class="feature-list" aria-label="Key features">
+          <li><span class="highlight">Mutual earning:</span> When someone watches your uploaded video both the viewer and you earn points — unique growth + reward loop.</li>
+            <li><span class="highlight">Refferal Program:</span>Every friends signup using your unique code you earn 5 points instantly ans also 5% of points lifetime earning when your friends watch videos and no limit .</li>
+          <li><span class="highlight">Daily activation tasks:</span> Add videos for free, but to keep them active you must complete 3 daily tasks (watch 5 videos, spin 5 times, claim daily login giveaway) — they reset every day.</li>
+          <li><span class="highlight">Earn while promoting:</span> Points and credits earned can be used to boost your own videos or converted to withdrawable money.</li>
+          <li><span class="highlight">Multiple withdrawal options:</span> India: UPI, Bank Transfer, Google Play Gift Card. Global: Payeer, SpeedWallet (satoshi).</li>
+          <li><span class="highlight">Gamer-friendly:</span> Host & participate in gaming tournaments (example: Free Fire) — win prizes and extra points.</li>
+          <li><span class="highlight">Secret codes & big giveaways:</span> Active social visitors get secret codes they can enter to win large prizes in special draws.</li>
+        </ul>
+      </div>
+      <div class="card" id="how-it-works">
+        <h3>How it works — Step by step</h3>
+        <ol style="padding-left:18px;color:var(--muted)">
+          <li><strong>Upload a video</strong> to BattleArena (adding videos is free). Your video will be visible but needs daily tasks done to remain "active" for receiving views.</li>
+          <li><strong>Daily tasks (reset every day):</strong>
+            <ul>
+              <li>Watch 5 videos (you also earn points while watching)</li>
+              <li>Complete 5 spins (spin wheel gives points; you also earn when you spin)</li>
+              <li>Claim the daily login giveaway (chance to win extra points)</li>
+            </ul>
+            Completing these keeps your uploaded video active without using credits.
+          </li>
+          <li><strong>Views & mutual earning:</strong> When other users watch your video they earn points and you also earn — both sides benefit.</li>
+          <li><strong>Promote or convert:</strong> Use credits to boost your video visibility, or convert points to withdrawable funds or gift cards.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Earnings & Withdrawals</h3>
+        <p class="muted">You earn points by: watching videos, uploading videos that get watched, spinning the wheel, winning daily giveaways, and participating in tournaments.</p>
+        <ul class="feature-list">
+          <li>Withdrawable options in India: <strong>UPI</strong>, <strong>Bank Transfer</strong>, <strong>Google Play Gift Card</strong>.</li>
+          <li>Global withdrawing: <strong>Payeer</strong>, <strong>SpeedWallet (satoshi)</strong>.</li>
+          <li>Points → credits conversion and in-app boosts available.</li>
+          <li>Transparent activity logs and earning history in-app.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tournaments & Community</h3>
+        <p class="muted">If you're a gamer, you'll love the tournaments. Currently hosting Free Fire tournaments; more games will be added.</p>
+        <ul class="feature-list">
+          <li>Join/organize competitive tournaments and win points, cash prizes, and special boosts for your channel.</li>
+          <li>Community leaderboards, match schedules and prize distribution inside the app.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Screenshots</h3>
+        <p class="muted">Click any image to view (replace placeholders with actual app screenshots).</p>
+        <div class="screenshot-row" id="screenshotRow" aria-hidden="false">
+          <img src="https://play-lh.googleusercontent.com/nxqofTZQXT4cr3U0pPzbe5jAssLhqZJPJ_qjO75YvwXMQjyVnb2y8xgLaBw_Pn9B8KBtlTB7jJX-NU6N21pJrg=w1052-h592-rw" onclick="openLightbox(this.src)">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiedyybl3kAUpVfD9mqwnzD8FyQzegWrl3neq1DKWMkS7DdiD6ZBkQY-CeTjTkbsdIZ3xB3-2XEqMjRZy4Xx3FHGqhssVaEOhqO4R1wlRMQQ2vSIPcjs4I9xGGlC52K6Mzc0WA4_KFz3B_vy43fqebLgAtkNABl322zhE7F5wWex_eBFgPHXhoiks_vfbo/s,400/1000050274.jpg" onclick="openLightbox(this.src)">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8inmJ_9xXt8kNhkvfWAX9HDgBUFWZCkRRh1gvmHNe_RLv7uYZU0r3JUiZxgz0u2Mx4s46Gi7evEVtqUXxFgaBuyoz7k6wYK06q9TNJsm_rWXhCP0PdwgGflaA7TFpp57ftizjz7jhYoySOnz7ZDAV_0JV9sjpLk8De-A49Ksh7RfyKSvWOW1lMakbXCc/s400/1000050275.jpg" onclick="openLightbox(this.src)">
+           <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvNqkGjhi5uLqD2v10ffPitJV3ki5jENB5FDowTTVTJH03WaVe5mrvFYznzvZdoIXNQyqjvtGc_d5Hg_EbkJrUl1mk2qEVcD2s0fSb9KM7_5pfCPPYeiR6ykwCgCW_4mh7GlRi0cwBedQh0GhhbXWU0Uguq3MwMr3ZTjyaYJ2RSQ5poJRX5MiTihyctRo/s400/1000050277.jpg" onclick="openLightbox(this.src)">
+           <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKzMi8ShTHVYUyNbemGiWHzrEgNwagNMtjccrunStT_DhFyuBz1XVXbY8N-t4rwu2RgbDI3uLkPOSL7LxTVl4R70Pdjkypuz0adYBJgrMb7Ci2WjJNGS4OUNJ_RMVWG_iPaAoqHGPb-snO-sLaaHY_f1n4MK5jIza6eoF-lcakF5euWgUMwFtMnj1aj0o/s400/1000050278.jpg" onclick="openLightbox(this.src)">
+        </div>
+      </div>
+      <div class="card">
+        <h3>FAQ</h3>
+        <dl class="faq">
+          <dt>Is adding videos free?</dt>
+          <dd>You can add videos for free. To ensure they receive views, complete the daily tasks (watch 5, spin 5, daily login giveaway).</dd>
+          <dt>Do viewers also earn?</dt>
+          <dd>Yes — whenever a user watches a video, the viewer earns points and the uploader also earns. It's a win-win model.</dd>
+          <dt>How often do tasks reset?</dt>
+          <dd>Daily. Tasks must be completed daily to keep your video active without spending credits.</dd>
+          <dt>How do withdrawals work?</dt>
+          <dd>Points can be converted or cashed out through available payout options. Withdrawal thresholds and processing times are handled in-app.</dd>
+        </dl>
+      </div>
+    </div>
+    <!-- FOOTER CTA -->
+    <div style="margin-top:22px;text-align:center">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.battle.BattleArena" target="_blank" rel="noopener noreferrer">Download BattleArena on Google Play</a>
+      <p class="muted" style="margin-top:10px">Start promoting your YouTube channel, earn points while you watch, and withdraw securely.</p>
+    </div>
+    <footer>
+      <p>App link: <a href="https://play.google.com/store/apps/details?id=com.battle.BattleArena" target="_blank" rel="noopener noreferrer">https://play.google.com/store/apps/details?id=com.battle.BattleArena</a></p>
+      <p>© <span id="year"></span> BattleArena — Promote. Watch. Earn.</p>
+    </footer>
+  </div>
+  <!-- Lightbox / small JS -->
+  <script>
+    // Insert the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Simple lightbox to view screenshots
+    function openLightbox(src){
+      const overlay = document.createElement('div');
+      overlay.style.position='fixed';
+      overlay.style.left=0; overlay.style.top=0; overlay.style.right=0; overlay.style.bottom=0;
+      overlay.style.background='rgba(0,0,0,0.8)';
+      overlay.style.display='flex'; overlay.style.alignItems='center'; overlay.style.justifyContent='center';
+      overlay.style.zIndex=9999;
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.maxWidth='92%';
+      img.style.maxHeight='92%';
+      img.style.borderRadius='8px';
+      img.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)';
+      overlay.appendChild(img);
+      overlay.addEventListener('click', ()=> document.body.removeChild(overlay));
+      document.body.appendChild(overlay);
+    }
+    // Accessibility: focus first download button on load for easy use
+    window.addEventListener('load', () => {
+      const btn = document.querySelector('.btn');
+      if(btn) btn.setAttribute('tabindex', '0');
+    });
+  </script>
+  <!--
+    NOTES for you:
+    - Replace placeholder images (app icon & screenshots) with actual images:
+        * App icon: replace the src in the .app-icon img
+        * Preview screenshot: replace in #preview-screenshot img
+        * The three images in the screenshot-row should be replaced with your real app screenshots
+    - Play Store link is already set to your app: https://play.google.com/store/apps/details?id=com.battle.BattleArena
+    - If you want to include your own Play badge image locally, replace the badge src with your hosted file.
+    - You can extend the page by adding testimonials, video demo embed, or a FAQ accordion.
+  -->
+ 
+  <!-- Bitcoin Promo -->
+  <div class="promo-section">
+    <h2>MINE YOUR FIRST BITCOIN</h2>
+    <p>Try this legit and trusted app — withdraw easily & start earning real crypto today.</p>
+   
+    <div class="promo-images">
+      <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixx3Tk_n5b3AaKvfy1KGYF1sYGz0W4chLZvGmYWF12H_9Cxisx6FW0s6oyfHD37kocAp-wjD7gibwgJRn-ES9umw-tOJNj_Z6uqBQ452TxaLMp97JBgLZcFGCi12Z4LwJxsUrIrwkDxhl8_Cg9yIT2RwnUt_LnOpsvc7kxBkWOdr72H-inm9GPp2QhDFw/s2400/1000005261.jpg" target="_blank">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixx3Tk_n5b3AaKvfy1KGYF1sYGz0W4chLZvGmYWF12H_9Cxisx6FW0s6oyfHD37kocAp-wjD7gibwgJRn-ES9umw-tOJNj_Z6uqBQ452TxaLMp97JBgLZcFGCi12Z4LwJxsUrIrwkDxhl8_Cg9yIT2RwnUt_LnOpsvc7kxBkWOdr72H-inm9GPp2QhDFw/w144-h320/1000005261.jpg" alt="Bitcoin App 1" />
+      </a>
+      <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikXWFRwR3WYx5pSjH2r70EEMdnz2vsSTsN8IxiWrM4nefP7VOgnu0zEKp-dC7PQxto0EShbsm6P6IeJLgt-rpuAglOvCDpsjbTO_OljelcaZ2DJzUYT8Jd2ZH5guvP63lAHaRPvuhV_y4SwjyYiaDq4kqkbFvMIdrVt8Oy5A4nHJyXsMTtA9hhyphenhyphenDddPlI" target="_blank">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikXWFRwR3WYx5pSjH2r70EEMdnz2vsSTsN8IxiWrM4nefP7VOgnu0zEKp-dC7PQxto0EShbsm6P6IeJLgt-rpuAglOvCDpsjbTO_OljelcaZ2DJzUYT8Jd2ZH5guvP63lAHaRPvuhV_y4SwjyYiaDq4kqkbFvMIdrVt8Oy5A4nHJyXsMTtA9hhyphenhyphenDddPlI/w144-h320/1000005260.jpg" alt="Bitcoin App 2" />
+      </a>
+      <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpvTRQM6yT-P3cRhW0kP1YKSD02ueEHoktnay9vXTe2oof3mckJDtOqiddU5uVwYrh__hp1g2rG4GPANtjPZfheSx7udDpIwHxAT5gZ050p8hMnN7lzBaE69mmwealQBeyW1pOEGp6liilKP49D_VIThDktO_Nw-SXu8y_B9nsbR5A4laQsj6a2r9x7g4" target="_blank">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpvTRQM6yT-P3cRhW0kP1YKSD02ueEHoktnay9vXTe2oof3mckJDtOqiddU5uVwYrh__hp1g2rG4GPANtjPZfheSx7udDpIwHxAT5gZ050p8hMnN7lzBaE69mmwealQBeyW1pOEGp6liilKP49D_VIThDktO_Nw-SXu8y_B9nsbR5A4laQsj6a2r9x7g4/w144-h320/1000005208.jpg" alt="Bitcoin App 3" />
+      </a>
+    </div>
+  </div>
+ 
+  <iframe height="600" src="https://cloudminecrypto.com/?invite_code=m3xLpJmEPA0JZ5O1" width="800" title="Bitcoin-CloudMining"></iframe>
+ 
+   <iframe height="600" src="https://lltrco.com/?r=valwp" width="800" title="LLTR"></iframe>
+     <iframe height="600" src="https://ptp.today/116091" width="800" title="neon"></iframe>
+    <iframe height="600" src="https://adsha.re/1198" width="800" title="Adsha.re"></iframe>
+  <iframe height="600" src="https://cashclicking.com/rotate.php?id=168513" width="800" title="CashClicking"></iframe>
+</body>
+</html>

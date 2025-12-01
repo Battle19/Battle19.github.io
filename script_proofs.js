@@ -16,6 +16,23 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // ------------------------------
+// Helper functions to mask sensitive info
+// ------------------------------
+function maskEmail(email) {
+  if (!email || !email.includes("@")) return email || "N/A";
+  const [name, domain] = email.split("@");
+  const parts = name.split(/[\._-]/); // split by dot/underscore/hyphen
+  let maskedName = parts[0] + "XXXXXXX"; // keep first part + mask
+  return maskedName + "@" + domain;
+}
+
+function maskPaymentMethod(payment) {
+  if (!payment) return "N/A";
+  const type = payment.split(":")[0]; // take only before colon
+  return type;
+}
+
+// ------------------------------
 // Load only SUCCESS withdrawals
 // ------------------------------
 function loadSuccessfulWithdrawals() {
@@ -48,9 +65,9 @@ function loadSuccessfulWithdrawals() {
 
         box.innerHTML = `
           <p><b>Transaction ID:</b> ${data.transactionId || 'N/A'}</p>
-          <p><b>Email:</b> ${data.email || 'N/A'}</p>
+          <p><b>Email:</b> ${maskEmail(data.email)}</p>
           <p><b>Amount:</b> ${data.amount || 0} ${data.currency || ''}</p>
-          <p><b>Payment Method:</b> ${data.paymentMethod || 'N/A'}</p>
+          <p><b>Payment Method:</b> ${maskPaymentMethod(data.paymentMethod)}</p>
           <p><b>Status:</b> ${data.status || 'N/A'}</p>
           <p><b>Remark:</b> ${data.remark || "None"}</p>
           <p><b>Requested At:</b> ${data.requestedAt ? data.requestedAt.toDate() : 'N/A'}</p>

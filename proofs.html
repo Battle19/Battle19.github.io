@@ -2,31 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Payment Proofs - BattleArena</title>
+  <title>Payment Proofs</title>
   <link rel="stylesheet" href="proofs.css">
-  <style>
-    body { font-family: 'Inter', sans-serif; background: #f5f6fa; padding: 20px; }
-    h1 { text-align: center; color: #2f3640; margin-bottom: 30px; }
-    #paymentProofs { max-width: 900px; margin: auto; }
-    .proof-box {
-      background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s;
-    }
-    .proof-box:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-    .proof-box p { margin: 8px 0; }
-    .proof-box b { color: #2f3640; }
-    .loading { text-align: center; color: #666; font-size: 1.1rem; }
-  </style>
 </head>
 <body>
-  <h1>List of Payment Proofs from BattleArena App Users</h1>
-  <div id="paymentProofs" class="loading">Loading proofs securely...</div>
+  <h1>list of Payment Proofs from BattleArena app users </h1>
+  <div id="paymentProofs">Loading data...</div>
 
-  <!-- Firebase SDK (public – safe) -->
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
 
-<!-- YOUR HIDDEN SCRIPT FROM PRIVATE REPO -->
-  <script src="https://cdn.jsdelivr.net/gh/Battle19/Battle20@main/script_proofs.js?token=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"></script>
+  <script src="script_proofs.js"></script>
 </body>
 </html>

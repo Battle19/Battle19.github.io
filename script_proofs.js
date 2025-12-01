@@ -16,33 +16,30 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // ------------------------------
-// Helper functions to mask sensitive info
+// Helper functions to mask data
 // ------------------------------
 function maskEmail(email) {
-  if (!email || !email.includes("@")) return email || "N/A";
-  const [name, domain] = email.split("@");
-  const parts = name.split(/[\._-]/); // split by dot/underscore/hyphen
-  let maskedName = parts[0] + "XXXXXXX"; // keep first part + mask
+  if (!email) return "";
+  const parts = email.split("@");
+  const namePart = parts[0];
+  const domain = parts[1] || "";
+  const maskedName = namePart.length > 3 ? namePart.substring(0, 3) + "XXXXXXX" : namePart + "XXXXXXX";
   return maskedName + "@" + domain;
 }
 
-function maskPaymentMethod(payment) {
-  if (!payment) return "N/A";
-  const type = payment.split(":")[0]; // take only before colon
-  return type;
+function maskPaymentMethod(method) {
+  if (!method) return "";
+  const parts = method.split(":");
+  return parts[0].trim(); // only show type before colon
 }
 
 // ------------------------------
 // Load only SUCCESS withdrawals
 // ------------------------------
 function loadSuccessfulWithdrawals() {
+
   const container = document.getElementById("paymentProofs");
-
-  if (!container) {
-    console.error("Container #paymentProofs not found.");
-    return;
-  }
-
+  if (!container) return; // prevent null error
   container.innerHTML = "Loading...";
 
   db.collection("withdrawalRequests")
@@ -64,22 +61,22 @@ function loadSuccessfulWithdrawals() {
         box.className = "proof-box";
 
         box.innerHTML = `
-          <p><b>Transaction ID:</b> ${data.transactionId || 'N/A'}</p>
+          <p><b>Transaction ID:</b> ${data.transactionId}</p>
           <p><b>Email:</b> ${maskEmail(data.email)}</p>
-          <p><b>Amount:</b> ${data.amount || 0} ${data.currency || ''}</p>
+          <p><b>Amount:</b> ${data.amount} ${data.currency}</p>
           <p><b>Payment Method:</b> ${maskPaymentMethod(data.paymentMethod)}</p>
-          <p><b>Status:</b> ${data.status || 'N/A'}</p>
+          <p><b>Status:</b> ${data.status}</p>
           <p><b>Remark:</b> ${data.remark || "None"}</p>
-          <p><b>Requested At:</b> ${data.requestedAt ? data.requestedAt.toDate() : 'N/A'}</p>
+          <p><b>Requested At:</b> ${data.requestedAt?.toDate()}</p>
         `;
 
         container.appendChild(box);
       });
     })
     .catch(err => {
-      container.innerHTML = "Error loading withdrawals.";
-      console.error("Firestore error:", err);
+      container.innerHTML = "Error loading: " + err;
+      console.error(err);
     });
 }
 
-window.addEventListener('DOMContentLoaded', loadSuccessfulWithdrawals);
+window.onload = loadSuccessfulWithdrawals;

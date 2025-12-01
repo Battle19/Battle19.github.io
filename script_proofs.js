@@ -1,10 +1,4 @@
-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
 
-
-
-// --------------------
-// Firebase Config
-// --------------------
 const firebaseConfig = {
   apiKey: "AIzaSyC7eHggBdYQL5cw9uNtgDT-SPCxgQbJPko",
   authDomain: "project1-2d8c8.firebaseapp.com",
@@ -15,13 +9,10 @@ const firebaseConfig = {
   measurementId: "G-TED8VLZ8TV"
 };
 
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-// ------------------------------
-// Helper functions to mask data
-// ------------------------------
 function maskEmail(email) {
   if (!email) return "";
   const parts = email.split("@");
@@ -34,12 +25,11 @@ function maskEmail(email) {
 function maskPaymentMethod(method) {
   if (!method) return "";
   const parts = method.split(":");
-  return parts[0].trim(); // only show type before colon
+  return parts[0].trim(); 
 }
 
 // ------------------------------
-// Load only SUCCESS withdrawals
-// ------------------------------
+
 function loadSuccessfulWithdrawals() {
 
   const container = document.getElementById("paymentProofs");

@@ -1,39 +1,77 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  margin: 20px;
-  color: #333;
+/* --------------------------
+  General Reset & Fonts
+-------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --------------------------
+  Container
+-------------------------- */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* --------------------------
+  Heading
+-------------------------- */
 h1 {
   text-align: center;
+  font-size: 2rem;
+  color: #2f3640;
   margin-bottom: 30px;
 }
 
-#paymentProofs {
-  max-width: 800px;
-  margin: 0 auto;
+/* --------------------------
+  Proofs Container
+-------------------------- */
+.proofs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* --------------------------
+  Each Proof Box (Card)
+-------------------------- */
 .proof-box {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-left: 5px solid #4CAF50;
-  border-radius: 6px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .proof-box:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .proof-box p {
-  margin: 5px 0;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
 }
 
-.proof-box b {
-  color: #555;
+.proof-box p b {
+  color: #2f3640;
+}
+
+/* --------------------------
+  Responsive
+-------------------------- */
+@media (max-width: 600px) {
+  .proof-box {
+    padding: 15px;
+  }
 }

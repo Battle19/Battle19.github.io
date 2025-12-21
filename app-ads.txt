@@ -2,4 +2,5 @@ google.com, pub-6518816846805772, DIRECT, f08c47fec0942fa0
 facebook.com, 2165080554023536, DIRECT, c3e20eee3f780d68
 yandex.com, 317819971, DIRECT
 inmobi.com, 728064cfc3e44c22b9bcec39dbabaf9a, DIRECT, 83e75a7ae333ca9d
+unityads.com, 96cabb6f-01cb-42f9-8e66-52f6d8b0c40f, DIRECT
 

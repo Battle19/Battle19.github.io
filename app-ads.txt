@@ -247,3 +247,4 @@ undertone.com, 4261, RESELLER
 adyoulike.com, 721f20f70910d379981dc19ec5da709f, RESELLER
 video.unrulymedia.com, 2464975885, RESELLER
 bidmachine.io, 1447, RESELLER
+vungle.com, 6957ba8b675b9cd83da5a20c, DIRECT, c107d686becd2d77

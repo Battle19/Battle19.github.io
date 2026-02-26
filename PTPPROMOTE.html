@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BattleArena — Watch videos visit website and Promote Your YouTube videos & Earn, Invite Friends and earn 5%-10% lifetime earning</title>
+  <meta name="description" content="Promote your YouTube channel, earn points and credits by watching & completing simple tasks, join gaming tournaments and withdraw to UPI, bank, or global wallets. Download BattleArena on Google Play." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#00d4ff;
+      --accent2:#0055ff;
+      --bg:#0a0e1a;
+      --card:rgba(20,25,45,0.85);
+      --border:rgba(0,212,255,0.3);
+      --text:#e2e8f0;
+      --muted:#94a3b8;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:'Inter',system-ui,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      background-image:url('https://images.unsplash.com/photo-1617791160505-6f00504e3519?q=80');
+      background-attachment:fixed;
+      background-size:cover;
+    }
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    /* TOP ROW – FINALLY 100% SMOOTH & SCROLLABLE EVERYWHERE */
+    .top-screenshot-section{
+      background:rgba(10,14,26,0.95);
+      backdrop-filter:blur(12px);
+      padding:30px 0 40px;
+      border-bottom:1px solid var(--border);
+      position:sticky;top:0;z-index:10;
+      overflow-x:hidden;
+    }
+    .top-screenshot-row{
+      display:flex;
+      gap:18px;
+      overflow-x:auto;
+      padding:10px 20px 20px;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      mask-image:linear-gradient(90deg,transparent,black 15%,black 85%,transparent);
+    }
+    .top-screenshot-row::-webkit-scrollbar{display:none}
+    .top-screenshot-row img{
+      width:170px;height:302px;object-fit:cover;border-radius:20px;
+      border:2px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      flex-shrink:0;scroll-snap-align:center;cursor:pointer;
+      transition:all .4s;
+    }
+    .top-screenshot-row img:hover{
+      transform:translateY(-12px) scale(1.05);
+      border-color:var(--accent);
+      box-shadow:0 20px 50px rgba(0,212,255,0.4);
+    }
+    @media(max-width:768px){.top-screenshot-row img{width:145px;height:258px}}
+    /* HERO & REST OF DESIGN */
+    .hero{background:rgba(15,20,40,0.8);backdrop-filter:blur(16px);border:1px solid var(--border);padding:50px 30px;border-radius:28px;margin:40px 0;box-shadow:0 20px 60px rgba(0,0,0,0.5);display:flex;gap:40px;align-items:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(0,85,255,0.05));pointer-events:none}
+    .app-icon{width:120px;height:120px;border-radius:28px;overflow:hidden;border:4px solid var(--accent);box-shadow:0 15px 40px rgba(0,212,255,0.4);animation:float 6s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+    h1{font-size:2.4rem;font-weight:800;line-height:1.25;background:linear-gradient(90deg,#fff,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
+    .lead{font-size:1.15rem;color:var(--muted);margin:16px 0}
+    .badges{margin:20px 0;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-block;background:var(--accent2);color:#fff;padding:14px 28px;border-radius:14px;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(0,85,255,0.4);transition:all .3s}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,85,255,0.6)}
+    .btn.secondary{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin:40px 0}
+    .card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);padding:28px;border-radius:20px;transition:all .4s;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+    .card:hover{transform:translateY(-10px);border-color:var(--accent);box-shadow:0 20px 50px rgba(0,212,255,0.25)}
+    .card h3{color:var(--accent);margin-bottom:16px;font-size:1.5rem}
+    .highlight{color:var(--accent);font-weight:800}
+    .feature-list li{padding:10px 0;border-bottom:1px dashed rgba(100,150,255,0.2);color:var(--muted)}
+    .promo-section{background:rgba(0,212,255,0.1);padding:40px;border-radius:20px;text-align:center;margin:60px 0;border:1px solid var(--accent)}
+    .promo-images{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:20px 0}
+    .promo-images img{border-radius:16px;transition:.3s;cursor:pointer}
+    .promo-images img:hover{transform:scale(1.1)}
+    footer{text-align:center;padding:50px;color:var(--muted);font-size:14px}
+    @media(max-width:880px){.hero{flex-direction:column;text-align:center}h1{font-size:2rem}}
+    .register-section {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.register-section .promo-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #00d4ff;
+  text-transform: uppercase;
+  line-height: 1.4;
+  flex: 1;
+}
+@media(max-width:768px){
+  .register-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .register-section .promo-text {
+    font-size: 0.85rem;
+  }
+}
+  </style>
+</head>
+<body>
+      <a class="btn secondary" href="https://battle19.github.io/proofs.html" target="_blank" rel="noopener noreferrer">Payment proof</a>
+  <div class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="app-media">
+        <div class="app-icon">
+          <img src="https://play-lh.googleusercontent.com/SYub5RrlwL1hFMJ3nHbIG2BiN-fd-ECuVgo9bP1NVuTgXveroIwZ1u8sMujYAxNV7b4YEz3mnN8vWTx4FunT=w480-h960-rw">
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1 id="hero-title">I JUST  EARN  CREDITS FROM 5 PTP SITE ON THIS ONE PAGE THAT CAN CONVERT TO CASH SHOWING THIS ONE PAGE , IT  CONTAIN 5 PTP LINK IN THIS JUST ONE PAGE AND I GET ALL VALID VIEW , MY REFFERAL LINK TO JOIN THIS SITE AND GET YOUR OWN PTP LINK ARE AT THE BOTTOM OF THIS PAGE , CLICK THE REGISTER AND START EARNING BUTTON TO UPLOAD YOUR PTP LINK AND GENERATE YOUR OWN LINK TO PROMOTE, GO TO CREATE SPLASH PAGE SECTION , AND ALL STEP BY STEP TO DO ARE ALL THERE , ALL THE BEST </h1>
+        <p class="lead">.</p>
+        <div class="badges">
+          <a class="btn secondary" href="#how-it-works">How it works</a>
+          <a class="btn secondary" href="https://battle19.github.io/proofs.html" target="_blank" rel="noopener noreferrer">Payment proof or success withdrawal</a>
+        </div>
+      <div class="register-section">
+  <a class="btn" href="https://battlearenaindependent.com" target="_blank" rel="noopener noreferrer">Register and Start Earning</a>
+  <div class="promo-text">
+    THIS PLATFORM GIVE MORE POINTS THAN ANY OTHER SITE ON - PTC, SHORTLINK, SURVEY, TASKS, OFFERWALL, FAUCET, READPOST, WATCH VIDEOS, GAME, AND MANY OTHER TASKS!!!! SO DON'T MISS IT
+      BITCOTASKS , OFFERWALLME , DRIPOFFER , AOYCO TASKS AND ZERADS CURRENTLY AVAILABLE ON WEBISTE AND VIDEO - REWARDED , SHORT TRAILER AND YOUTUBE VIDEOS ON APP, MORE TASKS WILL BE ADDED LATER!!!
+  </div>
+</div>
+      </div>
+    </section>
+    <div class="grid" role="main">
+      <div class="card">
+        <ul class="feature-list">
+        </ul>
+      </div>
+      <div class="card" id="how-it-works">
+        <h3></h3>
+        <ol style="padding-left:18px;color:var(--muted)">
+            <ul>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="card">
+        <ul class="feature-list">
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="feature-list">
+        </ul>
+      </div>
+      <div class="card">
+        <p class="muted"></p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;overflow-x:auto;padding:10px 0">
+        </div>
+      </div>
+      <div class="card">
+        <h3>FAQ</h3>
+        <dl style="color:var(--muted)">
+        <dt>How do withdrawals work?</dt><dd>Points can be converted or cashed out through available payout options. Withdrawal thresholds and processing times are handled in-app.</dd>
+        </dl>
+      </div>
+    </div>
+    <div style="text-align:center;margin:40px 0">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.battle.BattleArena" target="_blank">Download BattleArena on Google Play</a>
+    </div>
+<iframe src="https://lltrco.com/?r=valwp" width="100%" height="600" title="LLTR" style="border:none;border-radius:20px;margin-top:20px"></iframe>
+<iframe src="https://adsha.re/1198" style="width:100%; height:900px; min-width:360px; min-height:800px; border:none; border-radius:20px; margin-top:20px;" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+<iframe src="https://wxptp.com/881922" width="1000" height="700" style="border:none;" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe src="https://ptp.today/116091" width="1000" height="700" style="border:none;border-radius:20px;margin-top:20px;" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe src="https://www.goldenclix.com/?ref=Valwp" width="1000" height="700" style="border:none;border-radius:20px;margin-top:20px;" sandbox="allow-scripts allow-same-origin"></iframe>
+
+<div style="margin:40px 0; padding:20px; background:rgba(0,212,255,0.1); border:1px solid #00d4ff; border-radius:16px; text-align:center;">
+  <h3 style="color:#00d4ff;">My Referral Links (optional)</h3>
+<p><a href="https://leadsleap.com/?r=valwp" target="_blank" style="color:#00d4ff;">https://leadsleap.com/?r=valwp</a></p><p><a href="https://r.adsha.re/1198" target="_blank" style="color:#00d4ff;">https://r.adsha.re/1198</a></p><p><a href="https://wordlinx.com/881922" target="_blank" style="color:#00d4ff;">https://wordlinx.com/881922</a></p>
+</div>
+    <footer>© <span id="year"></span> BattleArena — Promote. Watch. Earn.</footer>
+  </div>
+</body>
+</html>

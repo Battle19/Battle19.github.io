@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BattleArena – Earn Real Cash Watching Videos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background: radial-gradient(circle at top,#1b1140,#050510 70%);
+color:#e6e9ff;
+min-height:100vh;
+line-height:1.6;
+}
+
+.container{
+max-width:1250px;
+margin:auto;
+padding:0 20px;
+}
+
+:root{
+--card-bg:rgba(255,255,255,0.05);
+--border:rgba(255,255,255,0.08);
+--accent:#7c3aed;
+--accent2:#ec4899;
+--success:#22c55e;
+--text-dim:#a4a9d6;
+}
+
+header{
+background:rgba(10,10,30,0.7);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.header-flex{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.logo{
+font-size:1.9rem;
+font-weight:800;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.btn{
+padding:12px 26px;
+border-radius:40px;
+font-weight:600;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-primary{
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+border:none;
+color:white;
+box-shadow:0 5px 20px rgba(124,58,237,0.4);
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+background:transparent;
+border:2px solid var(--accent);
+color:#c9caff;
+}
+
+.btn-secondary:hover{
+background:rgba(124,58,237,0.15);
+}
+
+.hero{
+padding:90px 0 60px;
+text-align:center;
+}
+
+.hero h1{
+font-size:clamp(2rem,4vw,3.3rem);
+font-weight:800;
+line-height:1.25;
+margin-bottom:18px;
+}
+
+.highlight{
+color:#ff7ad9;
+}
+
+.hero p{
+color:var(--text-dim);
+font-size:1.1rem;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.hero-ctas{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.earnings-bar{
+border-bottom:1px solid var(--border);
+background:rgba(10,10,40,0.7);
+backdrop-filter:blur(12px);
+overflow-x:auto;
+}
+
+.earnings-flex{
+display:flex;
+gap:15px;
+padding:12px 0;
+}
+
+.earning-item{
+background:var(--card-bg);
+border:1px solid var(--border);
+border-radius:14px;
+padding:10px 18px;
+min-width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.earning-item:hover{
+transform:translateY(-4px);
+}
+
+.earning-item .user{
+font-size:0.9rem;
+color:#c8c9ff;
+margin-bottom:3px;
+}
+
+.earning-item .pts{
+font-size:1.2rem;
+font-weight:700;
+color:var(--success);
+}
+
+.promo-section{
+margin-top:40px;
+text-align:center;
+background:var(--card-bg);
+border:1px solid var(--border);
+border-radius:18px;
+padding:40px 20px;
+}
+
+.promo-section h2{
+font-size:1.9rem;
+margin-bottom:10px;
+}
+
+.promo-section p{
+color:var(--text-dim);
+margin-bottom:20px;
+}
+
+.promo-section img{
+height:55px;
+transition:0.3s;
+}
+
+.promo-section img:hover{
+transform:scale(1.05);
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:50px;
+}
+
+.stat-card{
+background:var(--card-bg);
+border:1px solid var(--border);
+border-radius:18px;
+padding:30px;
+text-align:center;
+}
+
+.stat-card h3{
+color:#bdbfff;
+margin-bottom:8px;
+}
+
+.num{
+font-size:2.8rem;
+font-weight:800;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.payouts-section{
+margin-top:70px;
+}
+
+.payouts-section h2{
+text-align:center;
+margin-bottom:30px;
+font-size:2rem;
+}
+
+.payout-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
+}
+
+.payout-card{
+background:var(--card-bg);
+border:1px solid var(--border);
+border-radius:16px;
+padding:18px;
+transition:0.25s;
+}
+
+.payout-card:hover{
+transform:translateY(-4px);
+}
+
+.payout-card .user{
+color:#cfd2ff;
+margin-bottom:6px;
+}
+
+.payout-card .amt{
+font-size:1.6rem;
+font-weight:700;
+color:var(--success);
+}
+
+.payout-card .meta{
+margin-top:6px;
+font-size:0.9rem;
+color:var(--text-dim);
+}
+
+footer{
+text-align:center;
+margin-top:80px;
+padding:30px 10px;
+color:#8a8fd2;
+border-top:1px solid var(--border);
+font-size:0.9rem;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:70px 0 40px;
+}
+
+.hero h1{
+font-size:1.9rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="earnings-bar">
+<div class="container">
+<div class="earnings-flex" id="recentEarnings">
+<div class="earning-item">Loading recent activity...</div>
+</div>
+</div>
+</div>
+
+<header>
+<div class="container header-flex">
+
+<div class="logo">BattleArena</div>
+
+<div>
+<button class="btn btn-secondary" onclick="window.location='login.html'">Login</button>
+<button class="btn btn-primary" onclick="window.location='signup.html'">Sign Up Free</button>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<h1>
+Join Daily Giveaway, Earn Massive Points<br>
+<span class="highlight">Easy Tasks</span> – PTC, Shortlinks, Faucet, Articles, Games,<br>
+Watch Videos & YouTube Shorts
+</h1>
+
+<p>
+Join and  earn real rewards daily. Complete simple tasks, watch videos, and withdraw real cash anytime.
+</p>
+
+<div class="hero-ctas">
+<button class="btn btn-primary" onclick="window.location='signup.html'">Start Earning</button>
+<button class="btn btn-secondary" onclick="window.location='login.html'">Login</button>
+</div>
+
+</div>
+</section>
+
+<section class="container promo-section">
+
+<h2>Best Experience on Mobile</h2>
+<p>Earn faster with rewarded videos, Youtube shorts and daily points giveaway and exclusive tasks in the mobile app.</p>
+
+<a href="https://play.google.com/store/apps/details?id=com.battle.BattleArena" target="_blank">
+<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+</a>
+
+</section>
+
+<section class="container stats-grid">
+
+<div class="stat-card">
+<h3>Total Members</h3>
+<div class="num" id="totalUsers">0</div>
+</div>
+
+<div class="stat-card">
+<h3>Total No. of Paid Out Successfully</h3>
+<div class="num" id="totalWithdrawals">0</div>
+</div>
+
+</section>
+
+<section class="payouts-section container">
+
+<h2>Real Users •recent top 10 Real Payouts</h2>
+
+<div class="payout-grid" id="recentWithdrawals"></div>
+
+</section>
+
+<footer>
+© 2026 BattleArena — Watch • Earn • Withdraw
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script>
+
+const firebaseConfig = {
+apiKey:"AIzaSyC7eHggBdYQL5cw9uNtgDT-SPCxgQbJPko",
+authDomain:"project1-2d8c8.firebaseapp.com",
+projectId:"project1-2d8c8",
+storageBucket:"project1-2d8c8.firebasestorage.app",
+messagingSenderId:"968474886137",
+appId:"1:968474886137:web:794a36114ecf18d7d8c728"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db=firebase.firestore();
+
+function loadRecentEarnings(){
+const cont=document.getElementById("recentEarnings");
+cont.innerHTML="";
+
+db.collection("recentEarnings")
+.orderBy("timestamp","desc")
+.limit(5)
+.onSnapshot(snap=>{
+
+cont.innerHTML="";
+
+if(snap.empty){
+cont.innerHTML='<div class="earning-item">No recent earnings</div>';
+return;
+}
+
+snap.forEach(doc=>{
+const d=doc.data();
+
+const user=d.username||"User";
+
+let pts=0;
+
+if(d.points) pts=parseFloat(d.points);
+else if(d.message){
+const m=d.message.match(/(\d+\.?\d*)\s*pts/i);
+if(m) pts=parseFloat(m[1]);
+}
+
+const item=document.createElement("div");
+item.className="earning-item";
+
+item.innerHTML=`
+<div class="user">${user}</div>
+<div class="pts">Earns point just now</div>
+`;
+
+cont.appendChild(item);
+
+});
+
+});
+
+}
+
+function loadTotals(){
+
+db.collection("users").get().then(s=>{
+document.getElementById("totalUsers").textContent=s.size.toLocaleString();
+}).catch(()=>{
+document.getElementById("totalUsers").textContent="14,872";
+});
+
+db.collection("withdrawalRequests")
+.where("status","==","success")
+.get().then(s=>{
+document.getElementById("totalWithdrawals").textContent=s.size.toLocaleString();
+}).catch(()=>{
+document.getElementById("totalWithdrawals").textContent="5,419";
+});
+
+}
+
+function loadPayouts(){
+
+const grid=document.getElementById("recentWithdrawals");
+grid.innerHTML="";
+
+db.collection("withdrawalRequests")
+.where("status","==","success")
+.orderBy("requestedAt","desc")
+.limit(10)
+.onSnapshot(snap=>{
+
+grid.innerHTML="";
+
+if(snap.empty){
+grid.innerHTML='<p style="text-align:center;color:#a4a9d6">No recent payouts yet</p>';
+return;
+}
+
+snap.forEach(doc=>{
+
+const d=doc.data();
+
+const email=d.email||"";
+
+const masked=email.includes("@")
+?email.slice(0,3)+"•••"+email.slice(email.indexOf("@"))
+:"User";
+
+const amt=(d.amount||0).toFixed(2);
+
+const method=(d.paymentMethod||"Unknown").split(":")[0].trim();
+
+const timeStr=d.requestedAt
+?new Date(d.requestedAt.toDate()).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})
+:"Recent";
+
+const card=document.createElement("div");
+
+card.className="payout-card";
+
+card.innerHTML=`
+<div class="user"><i class="fas fa-user-shield"></i> ${masked}</div>
+<div class="amt">$${amt}</div>
+<div class="meta">via ${method} • ${timeStr}</div>
+`;
+
+grid.appendChild(card);
+
+});
+
+});
+
+}
+
+loadRecentEarnings();
+loadTotals();
+loadPayouts();
+
+</script>
+
+    <iframe height="600" src="https://cloudminecrypto.com/?invite_code=m3xLpJmEPA0JZ5O1" width="100%" style="border:none;border-radius:20px" title="Bitcoin-CloudMining"></iframe>
+    <iframe height="600" src="https://lltrco.com/?r=valwp" width="100%" style="border:none;border-radius:20px;margin-top:20px" title="LLTR"></iframe>
+<iframe
+  src="https://adsha.re/1198"
+  style="
+    width:100%;
+    height:900px;
+    min-width:360px;
+    min-height:800px;
+    border:none;
+    border-radius:20px;
+    margin-top:20px;
+  "
+  sandbox="allow-scripts allow-same-origin allow-forms"
+></iframe>
+ <iframe
+  src="https://wxptp.com/881922"
+  width="1000"
+  height="700"
+  style="border:none;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+    <iframe
+  src="https://ptp.today/116091"
+  width="1000"
+  height="700"
+  style="border:none;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+ <iframe
+  src="https://www.goldenclix.com/?ref=Valwp"
+  width="1000"
+  height="700"
+  style="border:none;"
+  sandbox="allow-scripts allow-same-origin">
+</iframe>
+    <iframe src="https://paysurf.pl/promujsurfuj.php?user=13496" width="640" height="480" ></iframe>
+    <iframe src="https://trafficg.com/hps.php?member=Valwp" width="640" height="480" ></iframe>
+   
+    <footer>© <span id="year"></span> BattleArena — Promote. Watch. Earn.</footer>
+  </div>
+  <script type="text/javascript">						tc_ad_client="Valwp19";						tc_ad_width="728";						tc_ad_height="90";						tc_color_border="#ffffff";						tc_color_title="#AC0101";						tc_color_background="#f8f8f8";						tc_color_text="#000000";						tc_color_url="#7c8e06";					</script>					<script type="text/javascript" src="//trafficadbar.com/bar/show.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function openLightbox(src){
+      const overlay=document.createElement('div');
+      overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,0.95);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:pointer';
+      const img=document.createElement('img');
+      img.src=src;img.style.cssText='max-width:92%;max-height:92%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.8)';
+      overlay.appendChild(img);
+      overlay.onclick=()=>document.body.removeChild(overlay);
+      document.body.appendChild(overlay);
+    }
+  </script>
+</body>
+</html>

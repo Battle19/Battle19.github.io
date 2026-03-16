@@ -879,7 +879,7 @@ function loadPayouts(){
     db.collection("withdrawalRequests")
       .where("status","==","success")
       .orderBy("requestedAt","desc")
-      .limit(10)
+      .limit(3)
       .onSnapshot(snap => {
 
           grid.innerHTML = "";
